@@ -11,17 +11,17 @@ const imageList = allImages;
 const nav = document.getElementById('nav');
 
 window.addEventListener('scroll', function() {
-    scrollposition = this.window.scrollY;
+    let scrollposition = window.scrollY;
 
-    if (scrollposition >=60) {
+    if (scrollposition >= 60) {
         nav.classList.add('nav-dark');
-    } else if (scrollposition <60) {
-        nav.classList.remove('nav-dark')
+    } else {
+        nav.classList.remove('nav-dark');
     }
-})
+});
 
+// ===== GALLERY =====
 const images = document.querySelectorAll(".gallery-img");
-
 const modalImage = document.getElementById("modalImage");
 const modal = new bootstrap.Modal(document.getElementById('galleryModal'));
 
@@ -29,7 +29,9 @@ let currentIndex = 0;
 
 images.forEach(img => {
   img.addEventListener("click", () => {
-    currentIndex = parseInt(img.dataset.index) || 0;
+    const index = parseInt(img.dataset.index);
+    currentIndex = !isNaN(index) ? index : 0;
+
     showImage();
     modal.show();
   });
@@ -40,6 +42,7 @@ function showImage() {
   modalImage.src = imageList[currentIndex];
 }
 
+// tombol next prev
 document.getElementById("nextBtn").onclick = () => {
   currentIndex = (currentIndex + 1) % imageList.length;
   showImage();
@@ -50,6 +53,7 @@ document.getElementById("prevBtn").onclick = () => {
   showImage();
 };
 
+// ===== AUTO SLIDE =====
 let startIndex = 0;
 
 const displayImages = [
@@ -59,6 +63,7 @@ const displayImages = [
 ];
 
 function updateGallery() {
+  // fade out
   displayImages.forEach(img => img.classList.add("fade-out"));
 
   setTimeout(() => {
@@ -68,6 +73,7 @@ function updateGallery() {
       displayImages[i].dataset.index = index;
     }
 
+    // fade in
     displayImages.forEach(img => {
       img.classList.remove("fade-out");
       img.classList.add("fade-in");
@@ -75,9 +81,11 @@ function updateGallery() {
   }, 300);
 }
 
+// auto geser tiap 3 detik
 setInterval(() => {
   startIndex = (startIndex + 1) % allImages.length;
   updateGallery();
 }, 3000);
 
+// init pertama
 updateGallery();
