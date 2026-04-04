@@ -1,25 +1,130 @@
-.fade-img {
-  transition: opacity 1s ease-in-out;
-  opacity: 1;
+// ===== DATA =====
+const allImages = [
+  { src: "Img/galery-1.png", label: "Semester 1" },
+  { src: "Img/galery-2.png", label: "Semester 2" },
+  { src: "Img/galery-3.png", label: "Semester 3" },
+  { src: "Img/galery-4.png", label: "Semester 4" },
+  { src: "Img/galery-5.png", label: "Semester 5" }
+];
+
+// ===== NAVBAR =====
+const nav = document.getElementById('nav');
+
+window.addEventListener('scroll', function () {
+  let scrollposition = window.scrollY;
+
+  if (scrollposition >= 60) {
+    nav.classList.add('nav-dark');
+  } else {
+    nav.classList.remove('nav-dark');
+  }
+});
+
+// ===== MODAL =====
+const images = document.querySelectorAll(".gallery-img");
+const modalImage = document.getElementById("modalImage");
+const modal = new bootstrap.Modal(document.getElementById('galleryModal'));
+
+let currentIndex = 0;
+
+images.forEach(img => {
+  img.addEventListener("click", () => {
+    const index = parseInt(img.dataset.index);
+    currentIndex = !isNaN(index) ? index : 0;
+
+    showImage();
+    modal.show();
+  });
+});
+
+function showImage() {
+  if (!allImages[currentIndex]) return;
+  modalImage.src = allImages[currentIndex].src;
 }
 
-.fade-out {
-  opacity: 0;
+// tombol modal
+document.getElementById("nextBtn").onclick = () => {
+  currentIndex = (currentIndex + 1) % allImages.length;
+  showImage();
+};
+
+document.getElementById("prevBtn").onclick = () => {
+  currentIndex = (currentIndex - 1 + allImages.length) % allImages.length;
+  showImage();
+};
+
+// ===== GALLERY =====
+let startIndex = 0;
+let isAnimating = false;
+let autoSlide;
+
+const displayImages = [
+  document.getElementById("img0"),
+  document.getElementById("img1"),
+  document.getElementById("img2")
+];
+
+const displayLabels = [
+  document.getElementById("label0"),
+  document.getElementById("label1"),
+  document.getElementById("label2")
+];
+
+function updateGallery() {
+  if (isAnimating) return;
+  isAnimating = true;
+
+  // fade out
+  displayImages.forEach(img => img.classList.add("fade-out"));
+
+  setTimeout(() => {
+    for (let i = 0; i < 3; i++) {
+      const index = (startIndex + i) % allImages.length;
+
+      displayImages[i].src = allImages[index].src;
+      displayImages[i].dataset.index = index;
+      displayLabels[i].textContent = allImages[index].label;
+    }
+
+    // fade in
+    displayImages.forEach(img => img.classList.remove("fade-out"));
+
+    isAnimating = false;
+  }, 500);
 }
 
-.overlay {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 15px 10px;
+// ===== AUTO SLIDE =====
+function startAutoSlide() {
+  autoSlide = setInterval(() => {
+    if (isAnimating) return;
 
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,0.85),
-    rgba(0,0,0,0)
-  );
-
-  color: white;
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: 400;
+    startIndex = (startIndex + 1) % allImages.length;
+    updateGallery();
+  }, 10000); // 10 detik
 }
+
+function resetAutoSlide() {
+  clearInterval(autoSlide);
+  startAutoSlide();
+}
+
+// ===== BUTTON CONTROL =====
+document.getElementById("nextGallery").onclick = () => {
+  if (isAnimating) return;
+
+  startIndex = (startIndex + 1) % allImages.length;
+  updateGallery();
+  resetAutoSlide();
+};
+
+document.getElementById("prevGallery").onclick = () => {
+  if (isAnimating) return;
+
+  startIndex = (startIndex - 1 + allImages.length) % allImages.length;
+  updateGallery();
+  resetAutoSlide();
+};
+
+// ===== INIT =====
+updateGallery();
+startAutoSlide();
