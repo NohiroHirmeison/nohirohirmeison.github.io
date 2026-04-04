@@ -166,25 +166,43 @@ hr {
 
 /* End Portofolio */
 
+/* image tetap full */
 .gallery-img {
-  cursor: pointer;
-  transform: scale(1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease;
+  width: 100%;
+  display: block;
 }
 
-/* hover effect */
-.gallery-img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+/* fade animasi */
+.fade-img {
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
 }
 
-/* fade animation */
 .fade-out {
   opacity: 0;
 }
 
-.fade-in {
-  opacity: 1;
+/* overlay gradient + text */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  
+  padding: 15px 10px;
+  
+  /* gradient hitam smooth */
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0)
+  );
+
+  /* font ikut web */
+  font-family: 'Ubuntu', sans-serif;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
 }
 
 /* modal animation */
