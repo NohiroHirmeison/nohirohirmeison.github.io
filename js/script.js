@@ -39,7 +39,7 @@ images.forEach(img => {
 
 function showImage() {
   if (!imageList[currentIndex]) return;
-  modalImage.src = imageList[currentIndex];
+  modalImage.src = imageList[currentIndex].src;
 }
 
 // tombol next prev
@@ -60,6 +60,12 @@ const displayImages = [
   document.getElementById("img0"),
   document.getElementById("img1"),
   document.getElementById("img2")
+];
+
+const displayLabels = [
+  document.getElementById("label0"),
+  document.getElementById("label1"),
+  document.getElementById("label2")
 ];
 
 function updateGallery() {
@@ -86,13 +92,7 @@ function updateGallery() {
 setInterval(() => {
   startIndex = (startIndex + 1) % allImages.length;
   updateGallery();
-}, 3000);
+}, 5000);
 
 // init pertama
 updateGallery();
-
-const displayLabels = [
-  document.getElementById("label0"),
-  document.getElementById("label1"),
-  document.getElementById("label2")
-];
