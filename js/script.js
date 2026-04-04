@@ -40,3 +40,33 @@ document.getElementById("prevBtn").onclick = () => {
   currentIndex = (currentIndex - 1 + imageList.length) % imageList.length;
   showImage();
 };
+
+// semua gambar project kamu
+const allImages = [
+  "Img/galery 1.png",
+  "Img/galery 2.png",
+  "Img/galery 3.png",
+  "Img/galery 4.png",
+  "Img/galery 5.png"
+];
+
+let startIndex = 0;
+
+const displayImages = [
+  document.getElementById("img0"),
+  document.getElementById("img1"),
+  document.getElementById("img2")
+];
+
+function updateGallery() {
+  for (let i = 0; i < 3; i++) {
+    displayImages[i].src = allImages[(startIndex + i) % allImages.length];
+  }
+}
+
+setInterval(() => {
+  startIndex = (startIndex + 1) % allImages.length;
+  updateGallery();
+}, 3000);
+
+updateGallery();
