@@ -17,8 +17,6 @@ const modal = new bootstrap.Modal(document.getElementById('galleryModal'));
 
 let currentIndex = 0;
 
-const imageList = allImages;
-
 images.forEach(img => {
   img.addEventListener("click", () => {
     currentIndex = parseInt(img.dataset.index) || 0;
