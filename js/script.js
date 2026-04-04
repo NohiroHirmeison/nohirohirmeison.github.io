@@ -17,7 +17,7 @@ const modal = new bootstrap.Modal(document.getElementById('galleryModal'));
 
 let currentIndex = 0;
 
-const imageList = Array.from(images).map(img => img.src);
+const imageList = allImages;
 
 images.forEach(img => {
   img.addEventListener("click", () => {
@@ -60,7 +60,9 @@ const displayImages = [
 
 function updateGallery() {
   for (let i = 0; i < 3; i++) {
-    displayImages[i].src = allImages[(startIndex + i) % allImages.length];
+    const index = (startIndex + i) % allImages.length;
+    displayImages[i].src = allImages[index];
+    displayImages[i].dataset.index = index; // 🔥 penting
   }
 }
 
