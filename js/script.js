@@ -128,3 +128,14 @@ document.getElementById("prevGallery").onclick = () => {
 // ===== INIT =====
 updateGallery();
 startAutoSlide();
+
+const popup = document.getElementById("welcomePopup");
+const enterBtn = document.getElementById("enterBtn");
+const music = document.getElementById("bgMusic");
+
+enterBtn.addEventListener("click", () => {
+  popup.classList.add("hide");
+
+  // play music setelah klik
+  music.play().catch(err => console.log("Autoplay blocked:", err));
+});
