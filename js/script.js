@@ -21,7 +21,7 @@ const imageList = allImages;
 
 images.forEach(img => {
   img.addEventListener("click", () => {
-    currentIndex = parseInt(img.dataset.index);
+    currentIndex = parseInt(img.dataset.index) || 0;
     showImage();
     modal.show();
   });
