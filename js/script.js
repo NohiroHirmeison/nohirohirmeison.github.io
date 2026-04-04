@@ -129,43 +129,33 @@ document.getElementById("prevGallery").onclick = () => {
 updateGallery();
 startAutoSlide();
 
-const popup = document.getElementById("welcomePopup");
+// ===== MUSIC + POPUP =====
 const enterBtn = document.getElementById("enterBtn");
+const popup = document.getElementById("welcomePopup");
 const music = document.getElementById("bgMusic");
 const muteBtn = document.getElementById("muteBtn");
 
-// set volume awal
+let isMuted = false;
+
+// volume default
 music.volume = 0.4;
 
-let fadeInterval;
+// masuk website
+enterBtn.onclick = () => {
+  popup.style.opacity = "0";
+  popup.style.pointerEvents = "none";
 
-// fungsi fade in audio
-function fadeInAudio() {
-  music.volume = 0;
-  let vol = 0;
+  setTimeout(() => {
+    popup.style.display = "none";
+  }, 500);
 
-  fadeInterval = setInterval(() => {
-    if (vol < 0.4) {
-      vol += 0.02;
-      music.volume = vol;
-    } else {
-      music.volume = 0.4;
-      clearInterval(fadeInterval);
-    }
-  }, 100);
-}
-
-// klik enter
-enterBtn.addEventListener("click", () => {
-  popup.classList.add("hide");
-
-  music.play().then(() => {
-    fadeInAudio();
-  }).catch(err => console.log("Autoplay blocked:", err));
-});
+  music.play();
+};
 
 // mute toggle
-muteBtn.addEventListener("click", () => {
-  music.muted = !music.muted;
-  muteBtn.textContent = music.muted ? "🔇" : "🔊";
-});
+muteBtn.onclick = () => {
+  isMuted = !isMuted;
+  music.muted = isMuted;
+
+  muteBtn.textContent = isMuted ? "🔇" : "🔊";
+};
