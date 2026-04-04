@@ -36,6 +36,7 @@ images.forEach(img => {
 });
 
 function showImage() {
+  if (!imageList[currentIndex]) return;
   modalImage.src = imageList[currentIndex];
 }
 
@@ -58,11 +59,20 @@ const displayImages = [
 ];
 
 function updateGallery() {
-  for (let i = 0; i < 3; i++) {
-    const index = (startIndex + i) % allImages.length;
-    displayImages[i].src = allImages[index];
-    displayImages[i].dataset.index = index;
-  }
+  displayImages.forEach(img => img.classList.add("fade-out"));
+
+  setTimeout(() => {
+    for (let i = 0; i < 3; i++) {
+      const index = (startIndex + i) % allImages.length;
+      displayImages[i].src = allImages[index];
+      displayImages[i].dataset.index = index;
+    }
+
+    displayImages.forEach(img => {
+      img.classList.remove("fade-out");
+      img.classList.add("fade-in");
+    });
+  }, 300);
 }
 
 setInterval(() => {
