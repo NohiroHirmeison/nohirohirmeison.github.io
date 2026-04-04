@@ -220,35 +220,30 @@ hr {
   }
 }
 
+/* POPUP */
 .welcome-popup {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.85);
+  background: #000;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  transition: 0.5s;
 }
 
 .welcome-box {
   text-align: center;
   color: white;
   font-family: 'Ubuntu', sans-serif;
-  animation: fadeIn 1s ease;
 }
 
 .music-info {
   opacity: 0.7;
-  font-size: 0.8rem;
-}
-
-.welcome-popup.hide {
-  opacity: 0;
-  pointer-events: none;
-  transition: 0.5s;
+  font-size: 12px;
 }
 
 /* MUTE BUTTON */
@@ -256,14 +251,18 @@ hr {
   position: fixed;
   bottom: 20px;
   left: 20px;
-  z-index: 9999;
+  z-index: 999;
   background: rgba(0,0,0,0.6);
   color: white;
   border: none;
   padding: 10px 12px;
   border-radius: 50%;
   cursor: pointer;
-  font-size: 18px;
+  transition: 0.3s;
+}
+
+.mute-btn:hover {
+  background: rgba(0,0,0,0.9);
 }
 
 @keyframes fadeIn {
