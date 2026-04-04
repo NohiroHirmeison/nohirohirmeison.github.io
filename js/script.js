@@ -132,10 +132,40 @@ startAutoSlide();
 const popup = document.getElementById("welcomePopup");
 const enterBtn = document.getElementById("enterBtn");
 const music = document.getElementById("bgMusic");
+const muteBtn = document.getElementById("muteBtn");
 
+// set volume awal
+music.volume = 0.4;
+
+let fadeInterval;
+
+// fungsi fade in audio
+function fadeInAudio() {
+  music.volume = 0;
+  let vol = 0;
+
+  fadeInterval = setInterval(() => {
+    if (vol < 0.4) {
+      vol += 0.02;
+      music.volume = vol;
+    } else {
+      music.volume = 0.4;
+      clearInterval(fadeInterval);
+    }
+  }, 100);
+}
+
+// klik enter
 enterBtn.addEventListener("click", () => {
   popup.classList.add("hide");
 
-  // play music setelah klik
-  music.play().catch(err => console.log("Autoplay blocked:", err));
+  music.play().then(() => {
+    fadeInAudio();
+  }).catch(err => console.log("Autoplay blocked:", err));
+});
+
+// mute toggle
+muteBtn.addEventListener("click", () => {
+  music.muted = !music.muted;
+  muteBtn.textContent = music.muted ? "🔇" : "🔊";
 });
