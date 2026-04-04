@@ -186,7 +186,7 @@ hr {
 .overlay {
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 10;
   width: 100%;
   
   padding: 15px 10px;
@@ -201,8 +201,8 @@ hr {
   /* font ikut web */
   font-family: 'Ubuntu', sans-serif;
   color: white;
-  font-weight: 400;
-  font-size: 16px;
+  font-weight: 500;
+  font-size: 24px;
 }
 
 /* modal animation */
