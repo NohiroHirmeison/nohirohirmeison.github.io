@@ -55,6 +55,7 @@ document.getElementById("prevBtn").onclick = () => {
 
 // ===== AUTO SLIDE =====
 let startIndex = 0;
+let isAnimating = false;
 
 const displayImages = [
   document.getElementById("img0"),
@@ -69,6 +70,9 @@ const displayLabels = [
 ];
 
 function updateGallery() {
+  if (isAnimating) return; // cegah glitch
+  isAnimating = true;
+
   // fade out
   displayImages.forEach(img => img.classList.add("fade-out"));
 
@@ -78,13 +82,13 @@ function updateGallery() {
 
       displayImages[i].src = allImages[index].src;
       displayImages[i].dataset.index = index;
-
-      // update text
       displayLabels[i].textContent = allImages[index].label;
     }
 
     // fade in
     displayImages.forEach(img => img.classList.remove("fade-out"));
+
+    isAnimating = false;
   }, 500);
 }
 
