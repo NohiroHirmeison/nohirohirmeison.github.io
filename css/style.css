@@ -251,11 +251,6 @@ hr {
   transition: 0.5s;
 }
 
-@keyframes fadeIn {
-  from {opacity: 0; transform: translateY(20px);}
-  to {opacity: 1; transform: translateY(0);}
-}
-
 /* MUTE BUTTON */
 .mute-btn {
   position: fixed;
