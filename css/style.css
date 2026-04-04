@@ -165,3 +165,16 @@ hr {
 }
 
 /* End Portofolio */
+
+.gallery-img {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+}
+
+#modalImage {
+  max-height: 80vh;
+}
