@@ -41,7 +41,6 @@ document.getElementById("prevBtn").onclick = () => {
   showImage();
 };
 
-// semua gambar project kamu
 const allImages = [
   "Img/galery-1.png",
   "Img/galery-2.png",
@@ -62,7 +61,7 @@ function updateGallery() {
   for (let i = 0; i < 3; i++) {
     const index = (startIndex + i) % allImages.length;
     displayImages[i].src = allImages[index];
-    displayImages[i].dataset.index = index; // 🔥 penting
+    displayImages[i].dataset.index = index;
   }
 }
 
