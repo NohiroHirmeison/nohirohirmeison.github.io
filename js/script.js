@@ -49,6 +49,8 @@ const allImages = [
   "Img/galery-5.png"
 ];
 
+const imageList = allImages;
+
 let startIndex = 0;
 
 const displayImages = [
