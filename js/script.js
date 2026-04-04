@@ -69,16 +69,17 @@ function updateGallery() {
   setTimeout(() => {
     for (let i = 0; i < 3; i++) {
       const index = (startIndex + i) % allImages.length;
-      displayImages[i].src = allImages[index];
+
+      displayImages[i].src = allImages[index].src;
       displayImages[i].dataset.index = index;
+
+      // update text
+      displayLabels[i].textContent = allImages[index].label;
     }
 
     // fade in
-    displayImages.forEach(img => {
-      img.classList.remove("fade-out");
-      img.classList.add("fade-in");
-    });
-  }, 300);
+    displayImages.forEach(img => img.classList.remove("fade-out"));
+  }, 500);
 }
 
 // auto geser tiap 3 detik
@@ -89,3 +90,9 @@ setInterval(() => {
 
 // init pertama
 updateGallery();
+
+const displayLabels = [
+  document.getElementById("label0"),
+  document.getElementById("label1"),
+  document.getElementById("label2")
+];
