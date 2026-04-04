@@ -43,11 +43,11 @@ document.getElementById("prevBtn").onclick = () => {
 
 // semua gambar project kamu
 const allImages = [
-  "Img/galery 1.png",
-  "Img/galery 2.png",
-  "Img/galery 3.png",
-  "Img/galery 4.png",
-  "Img/galery 5.png"
+  "Img/galery-1.png",
+  "Img/galery-2.png",
+  "Img/galery-3.png",
+  "Img/galery-4.png",
+  "Img/galery-5.png"
 ];
 
 let startIndex = 0;
