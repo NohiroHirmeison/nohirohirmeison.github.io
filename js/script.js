@@ -93,10 +93,32 @@ function updateGallery() {
 }
 
 // auto geser tiap 3 detik
-setInterval(() => {
+let autoSlide = setInterval(() => {
   startIndex = (startIndex + 1) % allImages.length;
   updateGallery();
-}, 5000);
+}, 10000);
 
 // init pertama
 updateGallery();
+
+document.getElementById("nextGallery").onclick = () => {
+  startIndex = (startIndex + 1) % allImages.length;
+  updateGallery();
+
+  resetAutoSlide();
+};
+
+document.getElementById("prevGallery").onclick = () => {
+  startIndex = (startIndex - 1 + allImages.length) % allImages.length;
+  updateGallery();
+
+  resetAutoSlide();
+};
+
+function resetAutoSlide() {
+  clearInterval(autoSlide);
+  autoSlide = setInterval(() => {
+    startIndex = (startIndex + 1) % allImages.length;
+    updateGallery();
+  }, 10000);
+}
