@@ -1,9 +1,9 @@
 const allImages = [
-  "Img/galery-1.png",
-  "Img/galery-2.png",
-  "Img/galery-3.png",
-  "Img/galery-4.png",
-  "Img/galery-5.png"
+  { src: "Img/galery-1.png", label: "Semester 1" },
+  { src: "Img/galery-2.png", label: "Semester 2" },
+  { src: "Img/galery-3.png", label: "Semester 3" },
+  { src: "Img/galery-4.png", label: "Semester 4" },
+  { src: "Img/galery-5.png", label: "Semester 5" }
 ];
 
 const imageList = allImages;
