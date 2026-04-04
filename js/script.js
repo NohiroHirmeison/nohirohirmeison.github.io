@@ -1,3 +1,13 @@
+const allImages = [
+  "Img/galery-1.png",
+  "Img/galery-2.png",
+  "Img/galery-3.png",
+  "Img/galery-4.png",
+  "Img/galery-5.png"
+];
+
+const imageList = allImages;
+
 const nav = document.getElementById('nav');
 
 window.addEventListener('scroll', function() {
@@ -38,16 +48,6 @@ document.getElementById("prevBtn").onclick = () => {
   currentIndex = (currentIndex - 1 + imageList.length) % imageList.length;
   showImage();
 };
-
-const allImages = [
-  "Img/galery-1.png",
-  "Img/galery-2.png",
-  "Img/galery-3.png",
-  "Img/galery-4.png",
-  "Img/galery-5.png"
-];
-
-const imageList = allImages;
 
 let startIndex = 0;
 
