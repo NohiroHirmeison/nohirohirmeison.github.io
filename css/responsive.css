@@ -60,7 +60,24 @@
 }
 
 @media screen and ( max-width : 350px ) {
-    #portofolio .col-md-12 {
+    #portofolio .d-flex {
         flex-direction: column;
     }
+}
+
+@media screen and (max-width: 768px) {
+  #portofolio .card img {
+    width: 100%;
+  }
+
+  #portofolio .d-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #modalImage {
+    max-height: 60vh;
+  }
 }
