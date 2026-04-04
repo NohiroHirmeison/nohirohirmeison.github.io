@@ -240,10 +240,35 @@ hr {
   animation: fadeIn 1s ease;
 }
 
+.music-info {
+  opacity: 0.7;
+  font-size: 0.8rem;
+}
+
 .welcome-popup.hide {
   opacity: 0;
   pointer-events: none;
   transition: 0.5s;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* MUTE BUTTON */
+.mute-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 9999;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
 }
 
 @keyframes fadeIn {
