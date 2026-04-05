@@ -58,13 +58,17 @@ section h1 {
 }
 
 #hero .social-icon {
-  left: 0;
-  right: 0;
   margin-top: 15px;
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
+  align-items: center;
 }
 
+#hero .social-icon .cv {
+  flex-basis: 100%; /* forces CV onto its own line */
+  margin-top: 4px;
+}
 /* CTA Buttons */
 .btn-custom1 {
   background-color: var(--acsentColor);
@@ -299,16 +303,19 @@ hr {
 
 /* Responsive Mobile */
 @media (max-width: 768px) {
-  .social-icon {
-    position: static;
-    text-align: center;
+  #hero .social-icon {
+    justify-content: center;
     margin-top: 15px;
   }
-
+  
+  #hero .social-icon .cv {
+    text-align: center;
+  }
+  
   #hero .btn-custom1 {
     margin-bottom: 15px;
   }
-
+  
   .social-icon svg {
     margin: 0 8px;
   }
