@@ -319,8 +319,11 @@ hr {
   }
 
   #hero .social-icon {
-    justify-content: center;
-    width: 100%;
+    justify-content: center !important;
+    width: 100% !important;
+    display: flex !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
   }
 
   #hero .cv {
