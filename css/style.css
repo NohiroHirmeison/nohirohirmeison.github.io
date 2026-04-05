@@ -63,6 +63,7 @@ section h1 {
   flex-wrap: wrap;
   gap: 12px;
   align-items: center;
+  justify-content: center;
   width: 100%;
 }
 
@@ -74,8 +75,10 @@ section h1 {
 #hero .hero-bottom {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  width: 100%;
 }
+
 /* CTA Buttons */
 .btn-custom1 {
   background-color: var(--acsentColor);
