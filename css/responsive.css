@@ -22,8 +22,8 @@
     }
     
     .social-icon {
-        left: 50%;
-        transform: translate(-50%);
+        left: unset;
+        transform: unset;
     }
 
     #about p {
