@@ -12,15 +12,15 @@ body {
 }
 
 body::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Edge */
-  }
+    display: none;
+}
 
 section h1 {
     color: #fff;
     font-size: 2.5rem;
 }
 
-/* Style Navbar */
+/* Navbar */
 .nav-link.active {
     color: var(--acsentColor) !important;
     font-weight: 700;
@@ -31,84 +31,80 @@ section h1 {
     z-index: 10;
     transition: .8s;
 }
-/* End Navbar */
 
-/* Section Hero */
-.color-acsent {
-    color: var(--acsentColor);
-}
-
+/* Hero */
 #hero {
     color: #fff;
     min-height: 100vh;
     padding-top: 75px;
 }
 
-#hero h1 {
-    font-size: 3rem;
-}
-
-#hero h2 {
-    font-weight: 300;
-}
-
+#hero h1 { font-size: 3rem; }
+#hero h2 { font-weight: 300; }
 #hero p {
     font-size: 1.1rem;
     font-weight: 300;
 }
 
-/* CTA (Call To Action) */
+.color-acsent {
+    color: var(--acsentColor);
+}
+
+/* BUTTON */
 .btn-custom1 {
     background-color: var(--acsentColor);
-    text-align: center;
     color: #fff;
-    min-width: 150px;
+    width: 250px;
     height: 45px;
     font-weight: 700;
     font-size: 1.1rem;
+    border: none;
 }
 
 .btn-custom1:hover {
     box-shadow: 0 0 5px rgba(0, 209, 255, 0.8);
 }
 
-.cv {
-    color: #fff;
-    cursor: pointer;
-    font-size: 1.1rem;
-}
-
-/* wrapper biar rapi */
+/* HERO BOTTOM WRAPPER (PENTING) */
 .hero-bottom {
-  width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* SOCIAL ICON */
 .social-icon {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    width: 100%;
+    max-width: 260px; /* 🔥 ini kunci biar ga tembus */
+    margin: 15px auto;
 }
 
 .social-icon a {
-  display: inline-flex;
+    display: inline-flex;
 }
 
-/* biar icon ga keluar */
 .social-icon svg {
-  flex-shrink: 0;
+    flex-shrink: 0;
+    transition: 0.3s;
 }
 
-.social-icon-footer {
-    margin-right: .7em;
-    margin-bottom: 20px;
+.social-icon svg:hover {
+    transform: scale(1.2);
+    color: var(--acsentColor);
+}
+
+/* CV TEXT */
+.cv {
     color: #fff;
+    font-size: 1.1rem;
+    text-align: center;
 }
-/* End CTA (Call To Action) */
 
-/* End Section Hero */
-
-/* About Section */
+/* ABOUT */
 hr {
     width: 35%;
     height: 5px;
@@ -118,21 +114,13 @@ hr {
 }
 
 #about {
-    min-height: 300px;
-    width: 100%;
     background-color: var(--secondaryColor);
     color: #fff;
-    padding-top: 80px;
-    padding-bottom: 80px;
-    margin-bottom: 80px;
+    padding: 80px 0;
 }
-/* End About Section */
 
-/* Skills */
-
+/* SKILL */
 #skill {
-    min-height: 600px;
-    width: 100%;
     color: #fff;
 }
 
@@ -150,222 +138,100 @@ hr {
     background-color: var(--acsentColor);
 }
 
-.skill-konten{
-    margin-top: 120px;
-}
-/* End Skills */
-
-/* Sertificate */
+/* SERTIFIKAT */
 #sertifikat {
-    margin-top: -170px;
-    padding-top: 270px;
-    padding-bottom: 80px;
-    background-color: var(--secondaryColor)
+    background-color: var(--secondaryColor);
+    padding: 80px 0;
 }
 
-#sertifikat p, a {
+#sertifikat p, 
+#sertifikat a {
     color: #fff !important;
-    text-decoration: none;
 }
 
 #sertifikat img {
     width: 49%;
     padding: 10px;
 }
-/* End Sertificate */
 
-/* Galery Portofolio */
-
+/* PORTOFOLIO */
 #portofolio .container {
     padding: 50px 10px 0px;
 }
 
-/* End Portofolio */
-
-/* image tetap full */
+/* GALLERY */
 .gallery-img {
-  width: 100%;
-  display: block;
-  z-index: 1;
-  transition: transform 0.4s ease;
+    width: 100%;
+    display: block;
+    transition: transform 0.4s ease;
 }
 
 .card {
-  overflow: hidden;
+    overflow: hidden;
+    position: relative;
 }
 
 .card:hover .gallery-img {
-  transform: scale(1.08);
+    transform: scale(1.08);
 }
 
-/* fade animasi */
-.fade-img {
-  transition: opacity 1s ease-in-out;
-  opacity: 1;
-}
-
-.fade-out {
-  opacity: 0;
-}
-
-/* overlay gradient + text */
+/* OVERLAY */
 .overlay {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 20px 12px;
-  z-index: 2;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 12px;
+    z-index: 2;
 
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0.8) 40%,
-    rgba(0, 0, 0, 0) 100%
-  );
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,1) 0%,
+        rgba(0,0,0,0.8) 40%,
+        rgba(0,0,0,0) 100%
+    );
 
-  font-family: 'Ubuntu', sans-serif;
-  color: white;
-  font-weight: 500;
-  font-size: 24px;
+    color: white;
+    font-size: 24px;
 }
 
-
-/* modal animation */
+/* MODAL */
 #modalImage {
-  animation: zoomIn 0.3s ease;
+    animation: zoomIn 0.3s ease;
 }
 
 @keyframes zoomIn {
-  from {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }
 
-/* POPUP */
-.welcome-popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  transition: 0.5s;
-}
-
-.welcome-box {
-  text-align: center;
-  color: white;
-  font-family: 'Ubuntu', sans-serif;
-}
-
-.music-info {
-  opacity: 0.7;
-  font-size: 12px;
-}
-
-/* MUTE BUTTON */
-.mute-btn {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  z-index: 999;
-  background: rgba(0,0,0,0.6);
-  color: white;
-  border: none;
-  padding: 10px 12px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.mute-btn:hover {
-  background: rgba(0,0,0,0.9);
-}
-
-@keyframes fadeIn {
-  from {opacity: 0; transform: translateY(20px);}
-  to {opacity: 1; transform: translateY(0);}
-}
-
-/* tombol close modal */
+/* CLOSE BUTTON */
 .btn-close {
-  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.7));
-  opacity: 1;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.7));
 }
 
-/* optional: hover biar lebih hidup */
 .btn-close:hover {
-  filter: drop-shadow(0 3px 10px rgba(0,0,0,0.9));
-  transform: scale(1.1);
-  transition: 0.2s;
+    filter: drop-shadow(0 3px 10px rgba(0,0,0,0.9));
+    transform: scale(1.1);
 }
 
-.social-icon {
-  margin-top: 15px;
-}
-
-.social-icon svg:hover {
-  transform: scale(1.2);
-  color: var(--acsentColor);
-  transition: 0.3s;
-}
-
+/* MOBILE FIX (INI YANG NYELAMETIN LU) */
 @media (max-width: 768px) {
-  #hero {
-    text-align: center;
-  }
-  /* tombol biar ga nabrak */
-  #hero .btn-custom1 {
-    margin-bottom: 15px;
-    width: 100%;
-  }
 
-  /* social icon jadi normal flow (PENTING BANGET) */
-  .hero-bottom {
-    text-align: center;
-  }
+    #hero {
+        text-align: center;
+    }
 
-  .social-icon {
-    justify-content: center;
-    flex-wrap: wrap; /* ini penting biar ga tembus */
-  }
+    .btn-custom1 {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 15px;
+    }
 
-  .cv {
-    display: block;
-    margin-top: 10px;
-  }
+    .social-icon {
+        max-width: 220px; /* 🔥 makin kecil biar aman */
+    }
 
-  /* icon spacing */
-  .social-icon svg {
-    margin: 0 8px;
-  }
-
+    .cv {
+        margin-top: 10px;
+    }
 }
-
-}
-
-/* hover icon */
-.social-icon svg:hover {
-  transform: scale(1.2);
-  color: var(--acsentColor);
-}
-
-/* khusus HP biar aman */
-@media (max-width: 768px) {
-  .social-icon {
-    position: static;
-    text-align: center;
-    margin-top: 15px;
-  }
-}
-
-kepo amat bang nengok css gw
