@@ -298,20 +298,26 @@ hr {
   transition: 0.2s;
 }
 
+.social-icon {
+  margin-top: 15px;
+}
+
+/* rapihin di HP */
+@media (max-width: 768px) {
+
   .social-icon {
-    position: static !important;
-    margin-top: 15px;
+    text-align: center;
   }
 
-  /* kasih jarak tombol */
   #hero .btn-custom1 {
     margin-bottom: 15px;
   }
 
-  /* biar ga nempel kiri */
   .social-icon svg {
-    margin-right: 10px;
+    margin: 0 8px;
   }
+
+}
 
 }
 
