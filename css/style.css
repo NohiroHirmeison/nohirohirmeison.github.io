@@ -57,6 +57,11 @@ section h1 {
     font-weight: 300;
 }
 
+#hero .social-icon {
+  left: 0;
+  right: 0;
+}
+
 /* CTA (Call To Action) */
 .btn-custom1 {
     background-color: var(--acsentColor);
