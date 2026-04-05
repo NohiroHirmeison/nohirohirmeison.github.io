@@ -78,9 +78,20 @@ section h1 {
     font-size: 1.1rem;
 }
 
-.social-icon svg{
-    margin-right: .4em;
-    margin-bottom: 10px;
+/* wrapper biar rapi */
+.hero-bottom {
+  width: 100%;
+}
+
+/* social icon */
+.social-icon {
+  display: flex;
+  gap: 12px;
+}
+
+/* biar icon ga keluar */
+.social-icon svg {
+  flex-shrink: 0;
 }
 
 .social-icon-footer {
@@ -314,10 +325,18 @@ hr {
   }
 
   /* social icon jadi normal flow (PENTING BANGET) */
-  .social-icon {
-    position: static !important; /* override position absolute */
+  .hero-bottom {
     text-align: center;
-    margin-top: 15px;
+  }
+
+  .social-icon {
+    justify-content: center;
+    flex-wrap: wrap; /* ini penting biar ga tembus */
+  }
+
+  .cv {
+    display: block;
+    margin-top: 10px;
   }
 
   /* icon spacing */
