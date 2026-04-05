@@ -328,6 +328,15 @@ hr {
   transition: 0.2s;
 }
 
+#organization {
+  min-height: 400px;
+  width: 100%;
+  color: #fff;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: var(--secondaryColor);
+}
+
 /* Responsive Mobile */
 @media (max-width: 992px) {
   #hero .hero-bottom {
