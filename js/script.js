@@ -1,10 +1,10 @@
 // ===== DATA =====
 const allImages = [
-  { src: "Img/galery-1.png", label: "1st Semester - Crypto" },
-  { src: "Img/galery-2.png", label: "Semester 2 - Socket Program" },
-  { src: "Img/galery-3.png", label: "Semester 3 - SIEM" },
-  { src: "Img/galery-4.png", label: "Semester 4 - SIEM & Attack" },
-  { src: "Img/galery-5.png", label: "Semester 5 - VAPT" }
+  { src: "Img/galery-1.png", label: "1st Semester - Cryptography App" },
+  { src: "Img/galery-2.png", label: "2nd Semester - Chat & Socket Programming" },
+  { src: "Img/galery-3.png", label: "3rd Semester - SIEM Implementation" },
+  { src: "Img/galery-4.png", label: "4th Semester - SIEM, Defend & Attack" },
+  { src: "Img/galery-5.png", label: "5th Semester - VA & Pentest" }
 ];
 
 // ===== NAVBAR =====
