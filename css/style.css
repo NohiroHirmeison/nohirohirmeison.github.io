@@ -57,11 +57,6 @@ section h1 {
     font-weight: 300;
 }
 
-#hero .social-icon {
-  left: 0;
-  right: 0;
-}
-
 /* CTA (Call To Action) */
 .btn-custom1 {
     background-color: var(--acsentColor);
@@ -302,17 +297,28 @@ hr {
   margin-top: 15px;
 }
 
-/* rapihin di HP */
+.social-icon svg:hover {
+  transform: scale(1.2);
+  color: var(--acsentColor);
+  transition: 0.3s;
+}
+
 @media (max-width: 768px) {
 
-  .social-icon {
-    text-align: center;
-  }
-
+  /* tombol biar ga nabrak */
   #hero .btn-custom1 {
     margin-bottom: 15px;
+    width: 100%;
   }
 
+  /* social icon jadi normal flow (PENTING BANGET) */
+  .social-icon {
+    position: static !important; /* override position absolute */
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  /* icon spacing */
   .social-icon svg {
     margin: 0 8px;
   }
