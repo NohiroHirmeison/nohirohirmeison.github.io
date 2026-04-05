@@ -23,7 +23,7 @@ window.addEventListener('scroll', function () {
 // ===== MODAL =====
 const images = document.querySelectorAll(".gallery-img");
 const modalImage = document.getElementById("modalImage");
-const modal = new bootstrap.Modal(document.getElementById('galleryModal'));
+let modal;
 
 let currentIndex = 0;
 
@@ -32,6 +32,7 @@ images.forEach(img => {
     const index = parseInt(img.dataset.index);
     currentIndex = !isNaN(index) ? index : 0;
 
+    if (!modal) modal = new bootstrap.Modal(document.getElementById('galleryModal'));
     showImage();
     modal.show();
   });
@@ -170,7 +171,7 @@ const allOrgImages = [
 
 // ===== ORG MODAL =====
 const orgModalImage = document.getElementById("orgModalImage");
-const orgModal = new bootstrap.Modal(document.getElementById('orgGalleryModal'));
+let orgModal;
 let orgCurrentIndex = 0;
 
 const orgImages = document.querySelectorAll(".org-gallery-img");
@@ -178,6 +179,7 @@ orgImages.forEach(img => {
   img.addEventListener("click", () => {
     const index = parseInt(img.dataset.index);
     orgCurrentIndex = !isNaN(index) ? index : 0;
+    if (!orgModal) orgModal = new bootstrap.Modal(document.getElementById('orgGalleryModal'));
     showOrgImage();
     orgModal.show();
   });
@@ -262,5 +264,7 @@ document.getElementById("orgPrevGallery").onclick = () => {
 };
 
 // ===== ORG INIT =====
-updateOrgGallery();
-startOrgAutoSlide();
+if (orgDisplayImages[0] !== null) {
+  updateOrgGallery();
+  startOrgAutoSlide();
+}
