@@ -85,8 +85,6 @@ section h1 {
 
 .social-icon {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
   gap: 12px;
 }
 
