@@ -353,3 +353,22 @@ hr {
     margin-bottom: 15px;
   }
 }
+
+.linkedin-link {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.linkedin-link svg {
+  transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.linkedin-link:hover {
+  color: var(--acsentColor);
+}
+
+.linkedin-link:hover svg {
+  fill: var(--acsentColor);
+  transform: scale(1.2);
+}
