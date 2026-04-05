@@ -83,10 +83,15 @@ section h1 {
   width: 100%;
 }
 
-/* social icon */
 .social-icon {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 12px;
+}
+
+.social-icon a {
+  display: inline-flex;
 }
 
 /* biar icon ga keluar */
