@@ -63,6 +63,7 @@ section h1 {
   flex-wrap: wrap;
   gap: 12px;
   align-items: center;
+  width: 100%;
 }
 
 #hero .social-icon .cv {
