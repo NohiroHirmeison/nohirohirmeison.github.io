@@ -309,7 +309,7 @@ hr {
 }
 
 /* Responsive Mobile */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   #hero .hero-bottom {
     align-items: center;
     width: 100%;
