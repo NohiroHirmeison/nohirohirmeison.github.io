@@ -305,17 +305,25 @@ hr {
 @media (max-width: 768px) {
   #hero .social-icon {
     justify-content: center;
+    align-items: center;
     margin-top: 15px;
+    padding-left: 0;
   }
-  
+
   #hero .social-icon .cv {
     text-align: center;
+    width: 100%;
   }
-  
+
+  #hero .hero-bottom {
+    display: flex;
+    justify-content: center;
+  }
+
   #hero .btn-custom1 {
     margin-bottom: 15px;
   }
-  
+
   .social-icon svg {
     margin: 0 8px;
   }
