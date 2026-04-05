@@ -69,6 +69,12 @@ section h1 {
   flex-basis: 100%; /* forces CV onto its own line */
   margin-top: 4px;
 }
+
+#hero .hero-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 /* CTA Buttons */
 .btn-custom1 {
   background-color: var(--acsentColor);
@@ -303,12 +309,17 @@ hr {
 
 /* Responsive Mobile */
 @media (max-width: 768px) {
+  #hero .hero-bottom {
+    align-items: center;
+    width: 100%;
+  }
+
   #hero .social-icon {
     justify-content: center;
+    width: 100%;
   }
 
   #hero .cv {
-    display: block;
     text-align: center;
     width: 100%;
   }
