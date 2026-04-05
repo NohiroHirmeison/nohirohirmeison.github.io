@@ -304,7 +304,9 @@ hr {
 }
 
 @media (max-width: 768px) {
-
+  #hero {
+    text-align: center;
+  }
   /* tombol biar ga nabrak */
   #hero .btn-custom1 {
     margin-bottom: 15px;
