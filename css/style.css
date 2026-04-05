@@ -316,14 +316,15 @@ hr {
   #hero .hero-bottom {
     align-items: center;
     width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   #hero .social-icon {
     justify-content: center !important;
     width: 100% !important;
-    display: flex !important;
-    padding-left: 0 !important;
     margin-left: 0 !important;
+    padding-left: 0 !important;
   }
 
   #hero .cv {
