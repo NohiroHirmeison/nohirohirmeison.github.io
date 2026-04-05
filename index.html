@@ -1,139 +1,117 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
-    <!-- My Style -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-
-    <!-- Link Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
-
     <title>Portofolio Nohiro Hirmeison</title>
   </head>
   <body>
-    <!-- FIX 1: Moved welcome popup, audio, and mute button inside <body> (they were between </head> and <body> before) -->
 
     <!-- WELCOME POPUP -->
     <div id="welcomePopup" class="welcome-popup">
       <div class="welcome-box">
         <h1>Welcome</h1>
         <p>To My Portfolio Website</p>
-    
         <small class="music-info">Now playing: Mind & Heart · Sullivan Murphy</small><br>
-    
         <button id="enterBtn" class="btn btn-light mt-3">Enter</button>
       </div>
     </div>
-    
+
     <!-- AUDIO -->
     <audio id="bgMusic" loop>
       <source src="music/music.mp3" type="audio/mpeg">
     </audio>
-    
+
     <!-- MUTE BUTTON -->
     <button id="muteBtn" class="mute-btn">🔊</button>
 
-    <!-- Navbar-->
+    <!-- Navbar -->
     <div class="container-fluid position-fixed" id="nav">
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark bg-transparent py-3">
-              <div class="row justify-content-center">
-                  <div class="col-8">
-                              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                          <span class="navbar-toggler-icon"></span>
-                      </button>
-                      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                          <div class="navbar-nav">
-                          <a class="nav-link active me-3" aria-current="page" href="#about">HOME</a>
-                          <a class="nav-link me-3" href="#portofolio">PORTOFOLIO</a>
-                          <a class="nav-link me-3" href="https://medium.com/@nohirohirmeison" target="_blank" rel="noopener noreferrer">BLOG</a>
-                          <a class="nav-link me-3" href="https://linkedin.com/in/nohirohirmeison" target="_blank" rel="noopener noreferrer">CONTACT</a>
-                          </div>
-                      </div>  
-                  </div>
+          <div class="row justify-content-center">
+            <div class="col-8">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active me-3" aria-current="page" href="#about">HOME</a>
+                  <a class="nav-link me-3" href="#portofolio">PORTOFOLIO</a>
+                  <a class="nav-link me-3" href="https://medium.com/@nohirohirmeison" target="_blank" rel="noopener noreferrer">BLOG</a>
+                  <a class="nav-link me-3" href="https://linkedin.com/in/nohirohirmeison" target="_blank" rel="noopener noreferrer">CONTACT</a>
+                </div>
               </div>
+            </div>
+          </div>
         </nav>
       </div>
     </div>
+    <!-- End Navbar -->
 
-    <!-- End Navbar-->
-
-    <!-- Hero Section-->
+    <!-- Hero Section -->
     <section id="hero">
-              <div class="container">
-                <div class="row position-relative">
-            
-                  <!-- TEXT -->
-                  <div class="col-12 col-md-6 col-lg-5 offset-lg-1 my-auto order-1 text-center text-md-start">
-                    
-                    <h2>Hello!</h2>
-                    <h1 class="fw-bold">I'm Nohiro Hirmeison</h1>
-                    
-                    <p>
-                      SOC Analyst | SIEM Engineer | Network Engineer | Penetration Testing<br>
-                      6th Semester 
-                      <span class="fw-bold color-acsent">
-                        Cybersecurity Engineering Student<br>
-                        at Batam State Polytechnic
-                      </span>
-                    </p>
-            
-                    <button onclick="window.open('https://www.linkedin.com/in/nohirohirmeison/', '_blank')" 
-                      class="btn btn-custom1 my-2">
-                      Let's Talk!
-                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 12H5m14 0-4 4m4-4-4-4"/>
-                          </svg>
-                          
-                    </button>
-                      <div class="hero-bottom">
-                        <div class="social-icon">
-                          <a href="https://www.linkedin.com/in/nohirohirmeison/" target="_blank" rel="noopener noreferrer">
-                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" viewBox="0 0 24 24">
-                              <path fill-rule="evenodd" d="M12.51 8.796v1.697a3.738 3.738 0 0 1 3.288-1.684c3.455 0 4.202 2.16 4.202 4.97V19.5h-3.2v-5.072c0-1.21-.244-2.766-2.128-2.766-1.827 0-2.139 1.317-2.139 2.676V19.5h-3.19V8.796h3.168ZM7.2 6.106a1.61 1.61 0 0 1-.988 1.483 1.595 1.595 0 0 1-1.743-.348A1.607 1.607 0 0 1 5.6 4.5a1.601 1.601 0 0 1 1.6 1.606Z" clip-rule="evenodd"/>
-                              <path d="M7.2 8.809H4V19.5h3.2V8.809Z"/>
-                            </svg>
-                          </a>
-                          <a href="https://github.com/NohiroHirmeison" target="_blank" rel="noopener noreferrer">
-                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" viewBox="0 0 24 24">
-                              <path fill-rule="evenodd" d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z" clip-rule="evenodd"/>
-                            </svg>
-                          </a>
-                          <a href="https://www.youtube.com/@Nohiro" target="_blank" rel="noopener noreferrer">
-                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" viewBox="0 0 24 24">
-                              <path fill-rule="evenodd" d="M21.7 8.037a4.26 4.26 0 0 0-.789-1.964 2.84 2.84 0 0 0-1.984-.839c-2.767-.2-6.926-.2-6.926-.2s-4.157 0-6.928.2a2.836 2.836 0 0 0-1.983.839 4.225 4.225 0 0 0-.79 1.965 30.146 30.146 0 0 0-.2 3.206v1.5a30.12 30.12 0 0 0 .2 3.206c.094.712.364 1.39.784 1.972.604.536 1.38.837 2.187.848 1.583.151 6.731.2 6.731.2s4.161 0 6.928-.2a2.844 2.844 0 0 0 1.985-.84 4.27 4.27 0 0 0 .787-1.965 30.12 30.12 0 0 0 .2-3.206v-1.516a30.672 30.672 0 0 0-.202-3.206Zm-11.692 6.554v-5.62l5.4 2.819-5.4 2.801Z" clip-rule="evenodd"/>
-                            </svg>
-                          </a>
-                          <a href="https://www.instagram.com/nohiroo" target="_blank" rel="noopener noreferrer">
-                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none" viewBox="0 0 24 24">
-                              <path fill="currentColor" fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd"/>
-                            </svg>
-                          </a>
-                        </div>
-                        <a href="https://raw.githubusercontent.com/NohiroHirmeison/nohirohirmeison.github.io/main/CV_Nohiro%20Hazel%20Nayottama%20Rafid%20Hirmeison.pdf" class="fw-bold text-decoration-none cv d-block mt-2">Download <span class="color-acsent">Curriculum Vitae</span></a>
-                            
-                      </div>
-                </div>
-                <div class="col-12 col-md-6 order-md-2 text-center">
-                  <img src="Img/Hero Banner.png" width="90%" class="mx-auto d-block" alt="">
-                </div>
+      <div class="container">
+        <div class="row position-relative">
+          <div class="col-12 col-md-6 col-lg-5 offset-lg-1 my-auto order-1 text-center text-md-start">
+            <h2>Hello!</h2>
+            <h1 class="fw-bold">I'm Nohiro Hirmeison</h1>
+            <p>
+              SOC Analyst | SIEM Engineer | Network Engineer | Penetration Testing<br>
+              6th Semester
+              <span class="fw-bold color-acsent">
+                Cybersecurity Engineering Student<br>
+                at Batam State Polytechnic
+              </span>
+            </p>
+            <button onclick="window.open('https://www.linkedin.com/in/nohirohirmeison/', '_blank')" class="btn btn-custom1 my-2">
+              Let's Talk!
+              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 12H5m14 0-4 4m4-4-4-4"/>
+              </svg>
+            </button>
+            <div class="hero-bottom">
+              <div class="social-icon">
+                <a href="https://www.linkedin.com/in/nohirohirmeison/" target="_blank" rel="noopener noreferrer">
+                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M12.51 8.796v1.697a3.738 3.738 0 0 1 3.288-1.684c3.455 0 4.202 2.16 4.202 4.97V19.5h-3.2v-5.072c0-1.21-.244-2.766-2.128-2.766-1.827 0-2.139 1.317-2.139 2.676V19.5h-3.19V8.796h3.168ZM7.2 6.106a1.61 1.61 0 0 1-.988 1.483 1.595 1.595 0 0 1-1.743-.348A1.607 1.607 0 0 1 5.6 4.5a1.601 1.601 0 0 1 1.6 1.606Z" clip-rule="evenodd"/>
+                    <path d="M7.2 8.809H4V19.5h3.2V8.809Z"/>
+                  </svg>
+                </a>
+                <a href="https://github.com/NohiroHirmeison" target="_blank" rel="noopener noreferrer">
+                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z" clip-rule="evenodd"/>
+                  </svg>
+                </a>
+                <a href="https://www.youtube.com/@Nohiro" target="_blank" rel="noopener noreferrer">
+                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M21.7 8.037a4.26 4.26 0 0 0-.789-1.964 2.84 2.84 0 0 0-1.984-.839c-2.767-.2-6.926-.2-6.926-.2s-4.157 0-6.928.2a2.836 2.836 0 0 0-1.983.839 4.225 4.225 0 0 0-.79 1.965 30.146 30.146 0 0 0-.2 3.206v1.5a30.12 30.12 0 0 0 .2 3.206c.094.712.364 1.39.784 1.972.604.536 1.38.837 2.187.848 1.583.151 6.731.2 6.731.2s4.161 0 6.928-.2a2.844 2.844 0 0 0 1.985-.84 4.27 4.27 0 0 0 .787-1.965 30.12 30.12 0 0 0 .2-3.206v-1.516a30.672 30.672 0 0 0-.202-3.206Zm-11.692 6.554v-5.62l5.4 2.819-5.4 2.801Z" clip-rule="evenodd"/>
+                  </svg>
+                </a>
+                <a href="https://www.instagram.com/nohiroo" target="_blank" rel="noopener noreferrer">
+                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none" viewBox="0 0 24 24">
+                    <path fill="currentColor" fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd"/>
+                  </svg>
+                </a>
+              </div>
+              <a href="https://raw.githubusercontent.com/NohiroHirmeison/nohirohirmeison.github.io/main/CV_Nohiro%20Hazel%20Nayottama%20Rafid%20Hirmeison.pdf" class="fw-bold text-decoration-none cv d-block mt-2">Download <span class="color-acsent">Curriculum Vitae</span></a>
             </div>
+          </div>
+          <div class="col-12 col-md-6 order-md-2 text-center">
+            <img src="Img/Hero Banner.png" width="90%" class="mx-auto d-block" alt="">
+          </div>
         </div>
-
+      </div>
     </section>
+    <!-- End Hero Section -->
 
-    <!-- End Hero Section-->
-
-    <!-- About Section-->
+    <!-- About Section -->
     <section id="about">
       <div class="container-fluid">
         <div class="container">
@@ -156,11 +134,9 @@
         </div>
       </div>
     </section>
+    <!-- End About Section -->
 
-
-    <!-- End About Section-->
-
-    <!-- Skill Section-->
+    <!-- Skill Section -->
     <section id="skill">
       <div class="container-fluid">
         <div class="container">
@@ -176,7 +152,6 @@
               <img src="Img/Opnsense.png" alt="">
               <img src="Img/Ubuntu.png" alt="">
               <img src="Img/Burp Suite Community.png" alt="">
-
             </div>
           </div>
           <div class="row justify-content-center skill-konten">
@@ -188,12 +163,9 @@
                       <path fill-rule="evenodd" d="M8 14.933a1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"/>
                     </svg>
                   </div>
-                  
                   <div class="col pt-3">
-                    <h3 class="text-sm-start fw-bold text-center
-                    ">SOC <br>Analyst</h3>
+                    <h3 class="fw-bold text-center">SOC <br>Analyst</h3>
                     <p class="text-start">I have hands-on experience as a SOC Analyst, including monitoring security events and analyzing logs to identify and respond to potential threats.</p>
-
                   </div>
                 </div>
               </div>
@@ -208,12 +180,9 @@
                       <path d="M14.667 11.668a6.5 6.5 0 0 1-1.458.789c-1.4.56-3.242.876-5.21.876-1.966 0-3.809-.316-5.208-.876a6.5 6.5 0 0 1-1.458-.79v1.666C1.333 14.806 4.318 16 8 16s6.667-1.194 6.667-2.667z"/>
                     </svg>
                   </div>
-                  
                   <div class="col pt-3">
-                    <h3 class="text-sm-start fw-bold text-center
-                    ">SIEM <br>Engineering</h3>
+                    <h3 class="fw-bold text-center">SIEM <br>Engineering</h3>
                     <p class="text-start">I have experience in building and managing SIEM systems, including log collection, correlation, and visualization to support security monitoring.</p>
-
                   </div>
                 </div>
               </div>
@@ -229,12 +198,9 @@
                       <path d="M8.5 5.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"/>
                     </svg>
                   </div>
-                  
                   <div class="col pt-3">
-                    <h3 class="text-sm-start fw-bold text-center
-                    ">Network <br>Engineer</h3>
+                    <h3 class="fw-bold text-center">Network <br>Engineer</h3>
                     <p class="text-start">I have strong skills in network engineering and security, including designing and securing network infrastructures.</p>
-
                   </div>
                 </div>
               </div>
@@ -250,12 +216,9 @@
                       <path d="M9.5 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
                     </svg>
                   </div>
-                  
                   <div class="col pt-3">
-                    <h3 class="text-sm-start fw-bold text-center
-                    ">Penetration <br>Testing</h3>
+                    <h3 class="fw-bold text-center">Penetration <br>Testing</h3>
                     <p class="text-start">I have a foundational understanding of penetration testing, including identifying vulnerabilities and assessing system security.</p>
-
                   </div>
                 </div>
               </div>
@@ -264,10 +227,9 @@
         </div>
       </div>
     </section>
+    <!-- End Skill Section -->
 
-    <!-- End Skill Section-->
-
-    <!--Sertificate section-->
+    <!-- Certificate Section -->
     <section id="sertifikat">
       <div class="container-fluid">
         <div class="container">
@@ -298,9 +260,9 @@
         </div>
       </div>
     </section>
-    <!--End Sertificate section-->
+    <!-- End Certificate Section -->
 
-    <!-- Portofolio -->
+    <!-- Project Gallery -->
     <section id="portofolio">
       <div class="container">
         <div class="row justify-content-center">
@@ -310,31 +272,19 @@
           </div>
         </div>
       </div>
-
       <div class="row justify-content-center">
         <div class="col-lg-10 col-md-12 d-flex pt-5">
           <div class="card border-3 m-1 position-relative overflow-hidden">
             <img class="gallery-img fade-img" id="img0">
-            
-            <div class="overlay">
-              <span id="label0"></span>
-            </div>
+            <div class="overlay"><span id="label0"></span></div>
           </div>
-  
           <div class="card border-3 m-1 position-relative overflow-hidden">
             <img class="gallery-img fade-img" id="img1">
-            
-            <div class="overlay">
-              <span id="label1"></span>
-            </div>
+            <div class="overlay"><span id="label1"></span></div>
           </div>
-          
           <div class="card border-3 m-1 position-relative overflow-hidden">
             <img class="gallery-img fade-img" id="img2">
-            
-            <div class="overlay">
-              <span id="label2"></span>
-            </div>
+            <div class="overlay"><span id="label2"></span></div>
           </div>
         </div>
       </div>
@@ -343,58 +293,42 @@
         <button id="nextGallery" class="btn btn-light">❯</button>
       </div>
     </section>
-    <!-- FIX 4: Added missing </section> closing tag for #portofolio -->
+    <!-- End Project Gallery -->
+
+    <!-- Organization Gallery -->
     <section id="organization">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-12">
-              <h1 class="text-center fw-bold">Organization Gallery</h1>
-              <hr>
-            </div>
-          </div>
-        </div>
-      
+      <div class="container">
         <div class="row justify-content-center">
-          <div class="col-lg-10 col-md-12 d-flex pt-5">
-            <div class="card border-3 m-1 position-relative overflow-hidden">
-              <img class="org-gallery-img fade-img" id="orgImg0">
-              <div class="overlay"><span id="orgLabel0"></span></div>
-            </div>
-            <div class="card border-3 m-1 position-relative overflow-hidden">
-              <img class="org-gallery-img fade-img" id="orgImg1">
-              <div class="overlay"><span id="orgLabel1"></span></div>
-            </div>
-            <div class="card border-3 m-1 position-relative overflow-hidden">
-              <img class="org-gallery-img fade-img" id="orgImg2">
-              <div class="overlay"><span id="orgLabel2"></span></div>
-            </div>
-          </div>
-        </div>
-      
-        <div class="text-center mt-3">
-          <button id="orgPrevGallery" class="btn btn-light me-2">❮</button>
-          <button id="orgNextGallery" class="btn btn-light">❯</button>
-        </div>
-      </section>
-      
-      <!-- Org Modal -->
-      <div class="modal fade" id="orgGalleryModal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-xl">
-          <div class="modal-content bg-dark border-0">
-            <div class="modal-body text-center position-relative">
-              <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"></button>
-              <button id="orgPrevBtn" class="btn btn-light position-absolute top-50 start-0 translate-middle-y ms-3">❮</button>
-              <img id="orgModalImage" class="img-fluid rounded">
-              <button id="orgNextBtn" class="btn btn-light position-absolute top-50 end-0 translate-middle-y me-3">❯</button>
-            </div>
+          <div class="col-12">
+            <h1 class="text-center fw-bold">Organization Gallery</h1>
+            <hr>
           </div>
         </div>
       </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-10 col-md-12 d-flex pt-5">
+          <div class="card border-3 m-1 position-relative overflow-hidden">
+            <img class="org-gallery-img fade-img" id="orgImg0">
+            <div class="overlay"><span id="orgLabel0"></span></div>
+          </div>
+          <div class="card border-3 m-1 position-relative overflow-hidden">
+            <img class="org-gallery-img fade-img" id="orgImg1">
+            <div class="overlay"><span id="orgLabel1"></span></div>
+          </div>
+          <div class="card border-3 m-1 position-relative overflow-hidden">
+            <img class="org-gallery-img fade-img" id="orgImg2">
+            <div class="overlay"><span id="orgLabel2"></span></div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-3">
+        <button id="orgPrevGallery" class="btn btn-light me-2">❮</button>
+        <button id="orgNextGallery" class="btn btn-light">❯</button>
+      </div>
     </section>
-    <!-- End Portofolio -->
+    <!-- End Organization Gallery -->
 
     <!-- Footer -->
-    <!-- FIX 2: Changed <Footer> to lowercase <footer> — HTML tags are case-sensitive -->
     <footer class="py-5">
       <div class="container">
         <div class="row">
@@ -407,17 +341,17 @@
             <p class="text-light">Thank you for visiting! I really appreciate your time.</p>
           </div>
           <div class="social-icon-footer text-center">
-            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" fill="currentColor" viewBox="0 0 24 24">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" fill="currentColor" viewBox="0 0 24 24">
               <path fill-rule="evenodd" d="M12.51 8.796v1.697a3.738 3.738 0 0 1 3.288-1.684c3.455 0 4.202 2.16 4.202 4.97V19.5h-3.2v-5.072c0-1.21-.244-2.766-2.128-2.766-1.827 0-2.139 1.317-2.139 2.676V19.5h-3.19V8.796h3.168ZM7.2 6.106a1.61 1.61 0 0 1-.988 1.483 1.595 1.595 0 0 1-1.743-.348A1.607 1.607 0 0 1 5.6 4.5a1.601 1.601 0 0 1 1.6 1.606Z" clip-rule="evenodd"/>
               <path d="M7.2 8.809H4V19.5h3.2V8.809Z"/>
             </svg>
-            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" fill="currentColor" viewBox="0 0 24 24">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" fill="currentColor" viewBox="0 0 24 24">
               <path fill-rule="evenodd" d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z" clip-rule="evenodd"/>
             </svg>
-            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" fill="currentColor" viewBox="0 0 24 24">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" fill="currentColor" viewBox="0 0 24 24">
               <path fill-rule="evenodd" d="M21.7 8.037a4.26 4.26 0 0 0-.789-1.964 2.84 2.84 0 0 0-1.984-.839c-2.767-.2-6.926-.2-6.926-.2s-4.157 0-6.928.2a2.836 2.836 0 0 0-1.983.839 4.225 4.225 0 0 0-.79 1.965 30.146 30.146 0 0 0-.2 3.206v1.5a30.12 30.12 0 0 0 .2 3.206c.094.712.364 1.39.784 1.972.604.536 1.38.837 2.187.848 1.583.151 6.731.2 6.731.2s4.161 0 6.928-.2a2.844 2.844 0 0 0 1.985-.84 4.27 4.27 0 0 0 .787-1.965 30.12 30.12 0 0 0 .2-3.206v-1.516a30.672 30.672 0 0 0-.202-3.206Zm-11.692 6.554v-5.62l5.4 2.819-5.4 2.801Z" clip-rule="evenodd"/>
             </svg>
-            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" fill="none" viewBox="0 0 24 24">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" fill="none" viewBox="0 0 24 24">
               <path fill="currentColor" fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd"/>
             </svg>
           </div>
@@ -426,25 +360,35 @@
     </footer>
     <!-- End Footer -->
 
-    <!-- Modal Gallery -->
+    <!-- Project Modal -->
     <div class="modal fade" id="galleryModal" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered modal-xl">
         <div class="modal-content bg-dark border-0">
           <div class="modal-body text-center position-relative">
-            <!-- tombol close -->
             <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"></button>
-            <!-- tombol prev -->
             <button id="prevBtn" class="btn btn-light position-absolute top-50 start-0 translate-middle-y ms-3">❮</button>
-            <!-- gambar -->
             <img id="modalImage" class="img-fluid rounded">
-            <!-- tombol next -->
             <button id="nextBtn" class="btn btn-light position-absolute top-50 end-0 translate-middle-y me-3">❯</button>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- My script -->
+    <!-- Org Modal -->
+    <div class="modal fade" id="orgGalleryModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content bg-dark border-0">
+          <div class="modal-body text-center position-relative">
+            <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"></button>
+            <button id="orgPrevBtn" class="btn btn-light position-absolute top-50 start-0 translate-middle-y ms-3">❮</button>
+            <img id="orgModalImage" class="img-fluid rounded">
+            <button id="orgNextBtn" class="btn btn-light position-absolute top-50 end-0 translate-middle-y me-3">❯</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 
