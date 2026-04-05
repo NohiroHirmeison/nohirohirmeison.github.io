@@ -293,21 +293,21 @@ hr {
   transition: 0.2s;
 }
 
-.social-icon {
-  position: static !important;
-  margin-top: 15px;
-  text-align: center;
-}
+  .social-icon {
+    position: static !important;
+    margin-top: 15px;
+  }
 
-/* jarak tombol biar ga nabrak */
-#hero .btn-custom1 {
-  margin-bottom: 15px;
-}
+  /* kasih jarak tombol */
+  #hero .btn-custom1 {
+    margin-bottom: 15px;
+  }
 
-/* rapihin icon */
-.social-icon svg {
-  margin: 0 6px;
-  transition: 0.3s;
+  /* biar ga nempel kiri */
+  .social-icon svg {
+    margin-right: 10px;
+  }
+
 }
 
 /* hover icon */
