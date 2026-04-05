@@ -159,3 +159,108 @@ muteBtn.onclick = () => {
 
   muteBtn.textContent = isMuted ? "🔇" : "🔊";
 };
+
+Here's the same script duplicated for your Organization Gallery. You just need to rename the data and element IDs:
+javascript// ===== ORG DATA =====
+const allOrgImages = [
+  { src: "Img/OSC2025.png", label: "Open Source Competition 2025" },
+  { src: "Img/PCLabsXBLUG.png", label: "PCLabs x BLUG" },
+  { src: "Img/org-3.png", label: "org3" },
+];
+
+// ===== ORG MODAL =====
+const orgModalImage = document.getElementById("orgModalImage");
+const orgModal = new bootstrap.Modal(document.getElementById('orgGalleryModal'));
+let orgCurrentIndex = 0;
+
+const orgImages = document.querySelectorAll(".org-gallery-img");
+orgImages.forEach(img => {
+  img.addEventListener("click", () => {
+    const index = parseInt(img.dataset.index);
+    orgCurrentIndex = !isNaN(index) ? index : 0;
+    showOrgImage();
+    orgModal.show();
+  });
+});
+
+function showOrgImage() {
+  if (!allOrgImages[orgCurrentIndex]) return;
+  orgModalImage.src = allOrgImages[orgCurrentIndex].src;
+}
+
+document.getElementById("orgNextBtn").onclick = () => {
+  orgCurrentIndex = (orgCurrentIndex + 1) % allOrgImages.length;
+  showOrgImage();
+};
+
+document.getElementById("orgPrevBtn").onclick = () => {
+  orgCurrentIndex = (orgCurrentIndex - 1 + allOrgImages.length) % allOrgImages.length;
+  showOrgImage();
+};
+
+// ===== ORG GALLERY =====
+let orgStartIndex = 0;
+let orgIsAnimating = false;
+let orgAutoSlide;
+
+const orgDisplayImages = [
+  document.getElementById("orgImg0"),
+  document.getElementById("orgImg1"),
+  document.getElementById("orgImg2")
+];
+
+const orgDisplayLabels = [
+  document.getElementById("orgLabel0"),
+  document.getElementById("orgLabel1"),
+  document.getElementById("orgLabel2")
+];
+
+function updateOrgGallery() {
+  if (orgIsAnimating) return;
+  orgIsAnimating = true;
+
+  orgDisplayImages.forEach(img => img.classList.add("fade-out"));
+  setTimeout(() => {
+    for (let i = 0; i < 3; i++) {
+      const index = (orgStartIndex + i) % allOrgImages.length;
+      orgDisplayImages[i].src = allOrgImages[index].src;
+      orgDisplayImages[i].dataset.index = index;
+      orgDisplayLabels[i].textContent = allOrgImages[index].label;
+    }
+    orgDisplayImages.forEach(img => img.classList.remove("fade-out"));
+    orgIsAnimating = false;
+  }, 500);
+}
+
+// ===== ORG AUTO SLIDE =====
+function startOrgAutoSlide() {
+  orgAutoSlide = setInterval(() => {
+    if (orgIsAnimating) return;
+    orgStartIndex = (orgStartIndex + 1) % allOrgImages.length;
+    updateOrgGallery();
+  }, 10000);
+}
+
+function resetOrgAutoSlide() {
+  clearInterval(orgAutoSlide);
+  startOrgAutoSlide();
+}
+
+// ===== ORG BUTTON CONTROL =====
+document.getElementById("orgNextGallery").onclick = () => {
+  if (orgIsAnimating) return;
+  orgStartIndex = (orgStartIndex + 1) % allOrgImages.length;
+  updateOrgGallery();
+  resetOrgAutoSlide();
+};
+
+document.getElementById("orgPrevGallery").onclick = () => {
+  if (orgIsAnimating) return;
+  orgStartIndex = (orgStartIndex - 1 + allOrgImages.length) % allOrgImages.length;
+  updateOrgGallery();
+  resetOrgAutoSlide();
+};
+
+// ===== ORG INIT =====
+updateOrgGallery();
+startOrgAutoSlide();
