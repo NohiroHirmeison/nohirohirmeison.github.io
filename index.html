@@ -305,7 +305,7 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-12">
-            <h1 class="text-center fw-bold">Portofolio Gallery</h1>
+            <h1 class="text-center fw-bold">Project Gallery</h1>
             <hr>
           </div>
         </div>
@@ -344,7 +344,53 @@
       </div>
     </section>
     <!-- FIX 4: Added missing </section> closing tag for #portofolio -->
-
+    <section id="organization">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12">
+              <h1 class="text-center fw-bold">Organization Gallery</h1>
+              <hr>
+            </div>
+          </div>
+        </div>
+      
+        <div class="row justify-content-center">
+          <div class="col-lg-10 col-md-12 d-flex pt-5">
+            <div class="card border-3 m-1 position-relative overflow-hidden">
+              <img class="org-gallery-img fade-img" id="orgImg0">
+              <div class="overlay"><span id="orgLabel0"></span></div>
+            </div>
+            <div class="card border-3 m-1 position-relative overflow-hidden">
+              <img class="org-gallery-img fade-img" id="orgImg1">
+              <div class="overlay"><span id="orgLabel1"></span></div>
+            </div>
+            <div class="card border-3 m-1 position-relative overflow-hidden">
+              <img class="org-gallery-img fade-img" id="orgImg2">
+              <div class="overlay"><span id="orgLabel2"></span></div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="text-center mt-3">
+          <button id="orgPrevGallery" class="btn btn-light me-2">❮</button>
+          <button id="orgNextGallery" class="btn btn-light">❯</button>
+        </div>
+      </section>
+      
+      <!-- Org Modal -->
+      <div class="modal fade" id="orgGalleryModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content bg-dark border-0">
+            <div class="modal-body text-center position-relative">
+              <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"></button>
+              <button id="orgPrevBtn" class="btn btn-light position-absolute top-50 start-0 translate-middle-y ms-3">❮</button>
+              <img id="orgModalImage" class="img-fluid rounded">
+              <button id="orgNextBtn" class="btn btn-light position-absolute top-50 end-0 translate-middle-y me-3">❯</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- End Portofolio -->
 
     <!-- Footer -->
