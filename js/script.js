@@ -165,7 +165,7 @@ muteBtn.onclick = () => {
 const allOrgImages = [
   { src: "Img/BLUG.jpeg", label: "Batam Linux User Group" },
   { src: "Img/OSC2025.png", label: "Open Source Competition 2025" },
-  { src: "Img/PCLabsXBLUG.jpeg", label: "PCLabs x BLUG" },
+  { src: "Img/PCLabsXBLUG.png", label: "PCLabs x BLUG" },
   { src: "Img/CyberLabsCTF.jpeg", label: "Cyber Labs CTF" },
 ];
 
