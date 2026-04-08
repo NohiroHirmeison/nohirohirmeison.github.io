@@ -210,6 +210,13 @@ hr {
   transition: transform 0.4s ease;
 }
 
+.org-img {
+  width: 100%;
+  display: block;
+  z-index: 1;
+  transition: transform 0.4s ease;
+}
+
 .card {
   overflow: hidden;
 }
