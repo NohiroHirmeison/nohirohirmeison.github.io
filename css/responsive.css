@@ -38,7 +38,6 @@
         padding-left: 30px !important;
         padding-right: 30px !important;
         margin-top: 20px;
-        min-height: 500px;
     }
     #konten .row {
         flex-direction: column;
