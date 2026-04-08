@@ -172,8 +172,7 @@ hr {
 
 /* Certificate Section */
 #sertifikat {
-  margin-top: -220px;
-  padding-top: 270px;
+  padding-top: 290px;
   padding-bottom: 80px;
   background-color: var(--secondaryColor);
 }
