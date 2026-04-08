@@ -39,6 +39,18 @@
         padding-right: 30px !important;
         margin-top: 20px;
     }
+    #konten .row {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #konten .col-lg-4 {
+        width: 90%;
+    }
+    
+    .content-thumb {
+        height: 200px;
+    }
 }
 
 @media screen and ( max-width : 576px ) {
@@ -56,6 +68,21 @@
 
     footer p {
         font-size: .8rem;
+    }
+    #konten .col-lg-4 {
+        width: 100%;
+    }
+
+    .content-thumb {
+       height: 160px;
+    }
+
+    .content-card {
+       padding: 16px !important;
+    }
+
+    .content-tag {
+       font-size: 0.65rem;
     }
 }
 
