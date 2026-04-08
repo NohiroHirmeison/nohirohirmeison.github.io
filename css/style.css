@@ -394,11 +394,13 @@ hr {
 .social-icon-footer a {
   display: inline-flex;
   transition: 0.3s;
+  color: #fff;
 }
 
 /* icon svg */
 .social-icon-footer svg {
   transition: 0.3s;
+  color: #fff;
 }
 
 /* hover effect */
