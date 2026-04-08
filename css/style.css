@@ -391,10 +391,6 @@ hr {
   transform: scale(1.2);
 }
 
-#portofolio .container {
-  padding-bottom: 150px;
-}
-
 .social-icon-footer a {
   display: inline-flex;
   transition: 0.3s;
