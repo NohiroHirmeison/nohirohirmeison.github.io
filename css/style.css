@@ -383,3 +383,7 @@ hr {
   fill: var(--acsentColor);
   transform: scale(1.2);
 }
+
+#portofolio .container {
+  padding-bottom: 150px;
+}
