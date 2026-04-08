@@ -423,3 +423,57 @@ hr {
   display: block;
   transition: opacity 1s ease-in-out, transform 0.4s ease;
 }
+
+#konten {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  color: #fff;
+}
+
+.content-card {
+  background-color: #414558;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.content-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(0, 209, 255, 0.3);
+}
+
+.content-card-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.content-card-link:hover {
+  color: var(--acsentColor);
+}
+
+.content-thumb {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.content-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.medium-tag {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.youtube-tag {
+  background-color: #ff0000;
+  color: #fff;
+}
