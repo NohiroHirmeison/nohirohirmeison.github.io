@@ -159,7 +159,7 @@ hr {
 
 #skill .card {
   background-color: #414558;
-  height: 475px;
+  height: 465px;
 }
 
 #skill .card:hover {
@@ -341,7 +341,7 @@ hr {
   min-height: 400px;
   width: 100%;
   color: #fff;
-  padding-top: 80px;
+  padding-top: 100px;
   padding-bottom: 80px;
   background-color: var(--secondaryColor);
 }
