@@ -1,10 +1,10 @@
 // ===== DATA =====
 const allImages = [
-  { src: "Img/galery-1.png", label: "1st Semester - Cryptography App" },
-  { src: "Img/galery-2.png", label: "2nd Semester - Chat & Socket Programming" },
-  { src: "Img/galery-3.png", label: "3rd Semester - SIEM Implementation" },
-  { src: "Img/galery-4.png", label: "4th Semester - SIEM, Defend & Attack" },
-  { src: "Img/galery-5.png", label: "5th Semester - VA & Pentest" }
+  { src: "Img/galery-1.webp", label: "1st Semester - Cryptography App" },
+  { src: "Img/galery-2.webp", label: "2nd Semester - Chat & Socket Programming" },
+  { src: "Img/galery-3.webp", label: "3rd Semester - SIEM Implementation" },
+  { src: "Img/galery-4.webp", label: "4th Semester - SIEM, Defend & Attack" },
+  { src: "Img/galery-5.webp", label: "5th Semester - VA & Pentest" }
 ];
 
 // ===== NAVBAR =====
@@ -163,10 +163,10 @@ muteBtn.onclick = () => {
 
 // ===== ORG DATA =====
 const allOrgImages = [
-  { src: "Img/BLUG.jpeg", label: "Batam Linux User Group" },
-  { src: "Img/OSC2025.png", label: "Open Source Competition 2025" },
-  { src: "Img/PCLabsXBLUG.png", label: "PCLabs x BLUG" },
-  { src: "Img/CyberLabsCTF.jpeg", label: "Cyber Labs CTF" },
+  { src: "Img/BLUG.webp", label: "Batam Linux User Group" },
+  { src: "Img/OSC2025.webp", label: "Open Source Competition 2025" },
+  { src: "Img/PCLabsXBLUG.webp", label: "PCLabs x BLUG" },
+  { src: "Img/CyberLabsCTF.webp", label: "Cyber Labs CTF" },
 ];
 
 // ===== ORG MODAL =====
