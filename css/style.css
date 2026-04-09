@@ -200,8 +200,11 @@ hr {
 
 /* Portfolio/Gallery */
 #portofolio .container {
-  padding: 50px 10px 80px;
+  padding: 50px 10px 10px;
 }
+
+#portofolio .text-center mt-3 {
+  padding-bottom: 10px;
 
 .gallery-img {
   width: 100%;
