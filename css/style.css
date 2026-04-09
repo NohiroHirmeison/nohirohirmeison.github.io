@@ -200,7 +200,7 @@ hr {
 
 /* Portfolio/Gallery */
 #portofolio .container {
-  padding: 50px 10px 0px;
+  padding: 50px 10px 80px;
 }
 
 .gallery-img {
@@ -341,6 +341,7 @@ hr {
   min-height: 400px;
   width: 100%;
   color: #fff;
+  padding-top: 80px;
   padding-bottom: 80px;
   background-color: var(--secondaryColor);
 }
