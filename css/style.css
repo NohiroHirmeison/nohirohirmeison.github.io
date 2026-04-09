@@ -207,6 +207,10 @@ hr {
   padding-bottom: 10px;
 }
 
+#portofolio .col-12 {
+  padding-top: 10px;
+}
+
 .gallery-img {
   width: 100%;
   display: block;
